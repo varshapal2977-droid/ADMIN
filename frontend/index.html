@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fit Mantra</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Chart.js for progress graph -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="logo">🌀</div><div class="title">Fit Mantra</div></div>
+    <nav class="nav">
+      <a>Home</a><a>About</a><a>Features</a><a>Mentorship</a>
+      <button id="loginBtn">Login</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Empathy meets Intelligence — Health meets Humanity.</h1>
+        <p>Track your fitness, diet, and wellness with real mentors and AI guidance.</p>
+        <div class="cta">
+          <button id="getStarted">Get Started</button>
+          <button id="watchDemo">Watch Demo</button>
+        </div>
+
+        <div class="features-row">
+          <div class="feature">
+            <h4>General Health Issues</h4>
+            <p>Explore A–Z topics</p>
+          </div>
+          <div class="feature">
+            <h4>Experts available</h4>
+            <p>Doctors, trainers</p>
+          </div>
+          <div class="feature">
+            <h4>Compassionate Filters</h4>
+            <p>Curated plans & filters</p>
+          </div>
+          <div class="feature">
+            <h4>Feedback forms</h4>
+            <p>Leave quick feedback</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="https://i.imgur.com/6z6bQvZ.png" alt="jogger" width="380" />
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <aside class="sidebar">
+        <button class="side-btn active" data-section="dashboard">Dashboard</button>
+        <button class="side-btn" data-section="health">Health Problems</button>
+        <button class="side-btn" data-section="fitness">Fitness</button>
+        <button class="side-btn" data-section="kids">Kids</button>
+        <button class="side-btn" data-section="mentors">Mentors</button>
+        <button class="side-btn" data-section="bookings">Bookings</button>
+      </aside>
+
+      <section class="content">
+        <div id="dashboard" class="page">
+          <h2>Welcome, <span id="userName">Guest</span></h2>
+          <div class="cards">
+            <div class="card">
+              <h3>Progress</h3>
+              <canvas id="progressChart" width="400" height="150"></canvas>
+              <div class="fitcoins">Fitcoins: <span id="fitcoins">0</span></div>
+            </div>
+            <div class="card">
+              <h3>Quick Actions</h3>
+              <button id="askChat">Ask FitChat</button>
+              <button id="findCheapest">Find Cheapest Item</button>
+              <button id="bookDemoMentor">Book Demo Mentor</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="mentors" class="page hidden">
+          <h2>Experts available</h2>
+          <div id="mentorsList"></div>
+        </div>
+
+        <div id="health" class="page hidden">
+          <h2>Health Problems</h2>
+          <p>General Health and guidance.</p>
+        </div>
+
+        <div id="fitness" class="page hidden">
+          <h2>Fitness</h2>
+          <p>Exercises, Gym, Yoga, Mental Health.</p>
+        </div>
+
+        <div id="kids" class="page hidden">
+          <h2>Kids</h2>
+          <p>Health + Fitness programs for kids.</p>
+        </div>
+
+        <div id="bookings" class="page hidden">
+          <h2>My Bookings</h2>
+          <div id="bookingsList">No bookings yet</div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- FitChat widget -->
+  <div id="fitchat">
+    <div id="chatHeader">Fit Chat</div>
+    <div id="chatBody"></div>
+    <input id="chatInput" placeholder="Ask Fit Chat..." />
+  </div>
+
+ 
+  <script src="app.js" defer></script>
+</body>
+</html>
