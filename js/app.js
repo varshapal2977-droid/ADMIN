@@ -18,7 +18,7 @@
    // console.log("time is up");
 //}// ,5000);
 
-//onsole.log("first message");
+//console.log("first message");
 ////setTimeout(() => {
    // console.log("second message")
 //}, 2000);
@@ -53,18 +53,31 @@
 //}   
 //print("callback function is invoked");
 
-function print (num){
-    console.log("inside print function");
+//function print (num){
+    //console.log("inside print function");
     
-}
+//}
+//function num(){
+    //setTimeout(() => {
+    //console.log("inside print function");
+    //num()
+
+//},2000) ;
+//function sample(){
+   // console.log("sample function is invoked");
+//
+
+console.log("starting homework....");
+
+setTimeout(() => {
+    console.log("finished homework");
+    console.log("starting dinner.....");
+
     setTimeout(() => {
-    console.log("inside print function");
-    num()
-
-},2000) ;
-function sample(){
-    console.log("sample function is invoked");
-}
-
-
-
+        console.log("dinner done....");
+        console.log("getting ready to go out....");
+        setTimeout(() => {
+            console.log("going to the playground.....");
+        }, 2000);
+    },3000);
+},2000);
