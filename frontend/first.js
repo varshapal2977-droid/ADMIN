@@ -26,6 +26,6 @@
 //console.log("name is varsha")
 //setTimeout(()=>console.log("after 2 seconds"),2000)
 //console.log(('no name')
-setTimeout(()=>
-    console.log("after 2 seconds")
-),2*1000
+//setTimeout(()=>
+   // console.log("after 2 seconds")
+//),2*1000

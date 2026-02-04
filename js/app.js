@@ -67,17 +67,51 @@
    // console.log("sample function is invoked");
 //
 
-console.log("starting homework....");
+//console.log("starting homework....");
 
-setTimeout(() => {
-    console.log("finished homework");
-    console.log("starting dinner.....");
+//setTimeout(() => {
+   // console.log("finished homework");
+  // console.log("starting dinner.....");
 
-    setTimeout(() => {
-        console.log("dinner done....");
-        console.log("getting ready to go out....");
-        setTimeout(() => {
-            console.log("going to the playground.....");
-        }, 2000);
+   //setTimeout(() => {
+        ///console.log("dinner done....");
+       // console.log("getting ready to go out....");
+        //setTimeout(() => {
+            //console.log("going to the playground.....");
+        //}, 2000);
+   // },3000);
+//},2000);
+
+//function hello (){
+    ///console.log("hello ");
+//}
+//setTimeout (()=>{
+   // console.log("hello after 2 seconds");
+//},3000);
+//function hello(){
+   // console.log('hello');
+//}
+//setTimeout(hello,2000);
+function finishhomework(callback){
+    console.log("starting homework....");
+    setTimeout(()=>{
+        console.log("finished homework");
+        callback();
     },3000);
-},2000);
+}
+function startdinner(callback){
+    console.log("start dinner...");
+    setTimeout(() => {
+        console.log("dinner done.....");
+        callback();
+    }, 1500);
+}
+function gotoplayground(callback){
+    console.log('go to plaground.....');
+    
+}
+finishhomework(() => {
+    startdinner(() => {
+        gotoplayground();
+    });
+});
