@@ -92,26 +92,57 @@
    // console.log('hello');
 //}
 //setTimeout(hello,2000);
-function finishhomework(callback){
-    console.log("starting homework....");
-    setTimeout(()=>{
-        console.log("finished homework");
-        callback();
-    },3000);
-}
-function startdinner(callback){
-    console.log("start dinner...");
-    setTimeout(() => {
-        console.log("dinner done.....");
-        callback();
-    }, 1500);
-}
-function gotoplayground(callback){
-    console.log('go to plaground.....');
+//function finishhomework(callback){
+    //console.log("starting homework....");
+    //setTimeout(()=>{
+       // console.log("finished homework");
+       // callback();
+   // },3000);
+//}
+//function startdinner(callback){
+    //console.log("start dinner...");
+    //setTimeout(() => {
+        //console.log("dinner done.....");
+       // callback();
+    //}, 1500);
+//}
+//function gotoplayground(callback){
+    //console.log('go to playground.....');
     
+//}
+//finishhomework(() => {
+   // startdinner(() => {
+        //gotoplayground();
+   // });
+//});
+//const p = new Promise((res,rej)=>{
+    //let done = false
+    //setTimeout(() => {
+        //if (done) {
+//res({name:"anand",age:23})
+        //}else{
+         / / //rej('word has not been compketed')
+        //}
+    //}, 5000);
+//})
+//p.then((data)=>{
+    //console.log(data.name);
+//}).catch((err)=>{
+    //console.log(err);
+//}).finally(()=>{
+    //console.log("finally changed");
+//});
+function dohomework(){
+    const p =new promise ((res,rej)=>{
+        let done = true;
+        setTimeout(() => {
+            if (done){
+                console.log("homework completed")
+                res("homework is done")
+            } else{
+                rej('homework not completed')
+            }
+        },2000);
+    })
+    return p
 }
-finishhomework(() => {
-    startdinner(() => {
-        gotoplayground();
-    });
-});
