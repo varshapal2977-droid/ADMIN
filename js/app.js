@@ -121,7 +121,7 @@
         //if (done) {
 //res({name:"anand",age:23})
         //}else{
-         / / //rej('word has not been compketed')
+         ///rej('word has not been compketed')
         //}
     //}, 5000);
 //})
@@ -132,17 +132,26 @@
 //}).finally(()=>{
     //console.log("finally changed");
 //});
-function dohomework(){
-    const p =new promise ((res,rej)=>{
-        let done = true;
-        setTimeout(() => {
-            if (done){
-                console.log("homework completed")
-                res("homework is done")
-            } else{
-                rej('homework not completed')
-            }
-        },2000);
-    })
-    return p
+//function dohomework(){
+    //const p =new promise ((res,rej)=>{
+        //let done = true;
+        ////setTimeout(() => {
+            //if (done){
+               // console.log("homework completed")
+          /     // res("homework is done")
+            //} else{
+                //rej('homework not completed')
+           // }
+        //},2000);
+   // })
+    //return p
+//}
+console.log('start');
+setTimeout(() => {
+    console.log('inside timeout')
+}, 0);
+Promise.resolve ().then(()=>{
+    console.log("inside promise")
 }
+)
+console.log("new promise");
