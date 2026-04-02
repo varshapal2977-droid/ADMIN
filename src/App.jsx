@@ -3,7 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import Samples from './components/Samples'
+import Sample from './components/Sample'
+import Navbar from './components/Navbar'
+
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -114,7 +117,7 @@ function App() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
-      <Samples/>
+      <Sample/>
     </>
   )
 }
