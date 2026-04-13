@@ -5,9 +5,10 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Sample from './components/Sample'
 import Navbar from './components/Navbar'
+import Homepage from './components/Homepage'
 
 
-function App() {
+/*function App() {
   const [count, setCount] = useState(0)
 
   return (
@@ -121,5 +122,18 @@ function App() {
     </>
   )
 }
+*/
+function App() {
+  const [menu, setMenu] = useState("Sports")
+  const [abc, setAbc] = useState("Entertainment")
 
+  return (
+    <>
+      <Homepage/>
+      <Navbar list={menu} />
+      <Navbar list={abc} />
+      <Sample />
+    </>
+  )
+}
 export default App
